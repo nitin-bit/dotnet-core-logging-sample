@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
 
 namespace LoggingSample
 {
@@ -16,6 +13,7 @@ namespace LoggingSample
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
+                .ConfigureLogging(f => f.AddConsole(LogLevel.Debug)) // initialize logging here to make the logger available in Startup.cs
                 .UseStartup<Startup>()
                 .Build();
 
