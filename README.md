@@ -1,4 +1,4 @@
-# Dotnet Core Logging Sample
+# Dotnet Core Logging Sample....
 This is an example of logging simultaneously to the console and [nLog](https://github.com/NLog/NLog.Extensions.Logging) from .NET Core.
 ---
 This sample is an [ASP.NET Core](https://www.asp.net/core) API site that shows:
